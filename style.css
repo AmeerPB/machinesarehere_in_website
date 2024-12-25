@@ -3,7 +3,7 @@ html {
   min-height: 100%;
 }
 
-body {
+/* body {
   box-sizing: border-box;
   height: 100%;
   background-color: #000000;
@@ -14,7 +14,48 @@ body {
   font-size: 1.5rem;
   color: rgba(128, 255, 128, 0.8);
   text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
+} */
+
+body {
+  display: flex; /* Enable Flexbox layout */
+  justify-content: space-between; /* Space out the children */
+  align-items: center; /* Vertically center items */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+  background-image: radial-gradient(#11581E, #041607), url("media/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inconsolata", Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: rgba(128, 255, 128, 0.8);
+  text-shadow: 0 0 1ex #33ff33, 0 0 2px rgba(255, 255, 255, 0.8);
 }
+
+.terminal {
+  flex: 1; /* Allow the terminal to take up remaining space */
+  max-width: 50%; /* Prevent it from getting too wide */
+  padding: 4rem;
+  text-transform: uppercase;
+  z-index: 2; /* Ensure it appears above noise/overlay */
+}
+
+.image-container {
+  flex: 0 0 auto; /* Prevent shrinking or growing */
+  margin-left: 2rem; /* Add spacing between the terminal and image */
+  z-index: 2; /* Ensure it appears above noise/overlay */
+}
+
+.image-container img {
+  max-width: 500px; /* Adjust image size */
+  height: auto; /* Keep aspect ratio */
+  border-radius: 8px; /* Optional for rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow effect */
+}
+
+
 
 .noise {
   pointer-events: none;
@@ -72,7 +113,7 @@ body {
     background-position: 0 100vh;
   }
 }
-.terminal {
+/* .terminal {
   box-sizing: inherit;
   position: absolute;
   height: 100%;
@@ -80,7 +121,7 @@ body {
   max-width: 100%;
   padding: 4rem;
   text-transform: uppercase;
-}
+} */
 
 .output {
   color: rgba(128, 255, 128, 0.8);
@@ -120,14 +161,14 @@ a::after {
   color: white;
 }
 
-.image-container {
+/* .image-container {
   flex: 0 0 auto;
-  margin-left: 2rem; /* Add space between the terminal and image */
-}
+  margin-left: 2rem;
+} */
 
-.image-container img {
-  max-width: 300px; /* Adjust size */
+/* .image-container img {
+  max-width: 300px; 
   height: auto;
-  border-radius: 8px; /* Optional for rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional for a shadow effect */
-}
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+} */
