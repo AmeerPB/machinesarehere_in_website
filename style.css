@@ -119,3 +119,15 @@ a::after {
 .errorcode {
   color: white;
 }
+
+.image-container {
+  flex: 0 0 auto;
+  margin-left: 2rem; /* Add space between the terminal and image */
+}
+
+.image-container img {
+  max-width: 300px; /* Adjust size */
+  height: auto;
+  border-radius: 8px; /* Optional for rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional for a shadow effect */
+}
