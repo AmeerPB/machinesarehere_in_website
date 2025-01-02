@@ -1,4 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Inconsolata';
+
 html {
   min-height: 100%;
 }
@@ -31,12 +32,12 @@ body {
 
 .image-container {
   display: flex; /* Center content inside this container */
-  align-items: center; /* Vertically center the image */
-  justify-content: center; /* Horizontally center the image inside container */
+  flex-direction: column; /* Stack the image and button vertically */
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
   flex: 0 0 auto; /* Prevent resizing */
   margin-left: 2rem; /* Add spacing between the terminal and image */
   z-index: 2; /* Ensure it appears above noise/overlay */
-  height: 100%; /* Match the height of the body for perfect centering */
 }
 
 .image-container img {
@@ -46,8 +47,13 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow effect */
 }
 
+.button-container {
+  margin-top: 20px; /* Space between the image and button */
+}
 
-
+.button-container a img {
+  border-radius: 4px; /* Optional for button styling */
+}
 
 .noise {
   pointer-events: none;
@@ -106,8 +112,6 @@ body {
   }
 }
 
-
-
 .output {
   color: rgba(128, 255, 128, 0.8);
   text-shadow: 0 0 1px rgba(51, 255, 51, 0.4), 0 0 2px rgba(255, 255, 255, 0.8);
@@ -116,8 +120,6 @@ body {
 .output::before {
   content: "> ";
 }
-
-
 
 a {
   color: #fff;
@@ -135,4 +137,3 @@ a::after {
 .errorcode {
   color: white;
 }
-
