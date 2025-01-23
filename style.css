@@ -41,7 +41,7 @@ body {
 }
 
 .image-container img {
-  max-width: 500px; /* Adjust image size */
+  max-width: 1000px; /* Adjust image size */
   height: auto; /* Keep aspect ratio */
   border-radius: 8px; /* Optional for rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow effect */
